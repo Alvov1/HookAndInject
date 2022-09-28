@@ -74,7 +74,7 @@ std::pair<unsigned, std::filesystem::path> init(int argc, const char* const* arg
         throw std::runtime_error("Usage: " + std::string(argv[0]) + " (pid | name) [ hooker location ].");
     unsigned processPid = getPid(argv[1]);
 
-    static constexpr auto defaultHookerLocation = "C:\\Users\\Alexander\\Desktop\\Folder\\Hooker.dll";
+    static constexpr auto defaultHookerLocation = "C:\\Users\\User\\Desktop\\Folder\\Hooker.dll";
     const auto hookerLocation = (argc > 2) ? std::filesystem::path(argv[2]) : std::filesystem::path(defaultHookerLocation);
     if (!std::filesystem::exists(hookerLocation))
         throw std::runtime_error("Path to the hoooker file is incorrect.");
